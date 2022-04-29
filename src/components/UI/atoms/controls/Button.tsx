@@ -10,8 +10,9 @@ const Button : React.FC<IButton> = ({
   return (
     <button
         className={`
-            py-3 px-6 text-white rounded text-sm leading-tight font-medium 
-            ${variant === 'primary' && 'bg-green-primary'} 
+            py-3 px-6 rounded text-sm leading-tight font-medium border border-green-primary 
+            ${variant === 'primary' && 'text-white bg-green-primary'} 
+            ${variant === 'secondary' && 'text-green-primary bg-transparent border border-green-primary'} 
             ${classes}
         `}
         onClick={onClick}
