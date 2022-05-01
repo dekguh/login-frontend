@@ -33,3 +33,17 @@ export interface IFormLogin {
     onClickLogin?: MouseEventHandler;
     onClickGoogle?: MouseEventHandler;
 }
+
+export interface IAppProvider {
+    childen?: JSX.Element;
+}
+
+export interface IAppInitialState {
+    isLogin?: boolean;
+    actUpdateIsLogin?: (status: boolean) => void;
+}
+
+export interface IPayloadAction {
+    type: string;
+    payload?: any;
+}
