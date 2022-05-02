@@ -14,7 +14,7 @@ const FormLogin : React.FC<IFormLogin> = ({
     onClickGoogle
 }) => {
   return (
-    <WrapperForm classes='py-10 px-6 rounded-lg w-full'>
+    <WrapperForm classes='py-10 px-6 rounded-lg w-full' dataTestId='form-login'>
         <TextHeading
             text='Welcome back to Social Fashion'
         />

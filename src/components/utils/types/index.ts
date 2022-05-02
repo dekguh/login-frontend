@@ -5,6 +5,7 @@ export interface IButton {
     text?: string;
     onClick?: MouseEventHandler;
     classes?: string;
+    dataTestId?: string;
 }
 
 export interface ITextField extends Pick<IButton, 'classes'> {
@@ -17,6 +18,7 @@ export interface ITextLabel extends Pick<IButton, 'text' | 'classes'> {}
 
 export interface ITextLink extends Pick<IButton, 'text' | 'classes'> {
     to?: string;
+    dataTestId?: string;
 }
 
 export interface ITextHeading extends Pick<IButton, 'text' | 'classes'> {
@@ -25,6 +27,7 @@ export interface ITextHeading extends Pick<IButton, 'text' | 'classes'> {
 
 export interface IWrapperForm extends Pick<IButton, 'classes'> {
     children?: JSX.Element | ReactNode;
+    dataTestId?: string;
 }
 
 export interface IFormLogin {
@@ -32,6 +35,7 @@ export interface IFormLogin {
     onChangePassword?: ChangeEventHandler;
     onClickLogin?: MouseEventHandler;
     onClickGoogle?: MouseEventHandler;
+    dataTestId?: string;
 }
 
 export interface IAppProvider {
