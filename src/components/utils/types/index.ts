@@ -6,12 +6,14 @@ export interface IButton {
     onClick?: MouseEventHandler;
     classes?: string;
     dataTestId?: string;
+    type?: "button" | "reset" | "submit" | undefined;
 }
 
 export interface ITextField extends Pick<IButton, 'classes'> {
     type?: 'text' | 'email' | 'password';
     placeholder?: string;
     onChange?: ChangeEventHandler;
+    otherProps?: {[key: string]: any};
 }
 
 export interface ITextLabel extends Pick<IButton, 'text' | 'classes'> {}
@@ -31,11 +33,8 @@ export interface IWrapperForm extends Pick<IButton, 'classes'> {
 }
 
 export interface IFormLogin {
-    onChangeEmail?: ChangeEventHandler;
-    onChangePassword?: ChangeEventHandler;
-    onClickLogin?: MouseEventHandler;
-    onClickGoogle?: MouseEventHandler;
-    dataTestId?: string;
+    email?: string;
+    password?: string;
 }
 
 export interface IAppProvider {
@@ -50,4 +49,9 @@ export interface IAppInitialState {
 export interface IPayloadAction {
     type: string;
     payload?: any;
+}
+
+export interface ITextError {
+    classes?: string;
+    text?: string;
 }

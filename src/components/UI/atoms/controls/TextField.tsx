@@ -2,12 +2,15 @@ import React, { useState } from 'react'
 import { ITextField } from '../../../utils/types'
 import { BsEyeSlashFill, BsEye } from 'react-icons/bs'
 
-const TextField : React.FC<ITextField> = ({
-  type,
-  onChange,
-  placeholder,
-  classes
-}) => {
+const TextField : React.FC<ITextField> = (props) => {
+  const {
+    onChange,
+    placeholder,
+    classes,
+    type,
+    otherProps
+  } = props
+
   /** for type password */
   const [isShowing, setIsShowing] = useState<boolean>(false)
 
@@ -26,6 +29,7 @@ const TextField : React.FC<ITextField> = ({
           ? isShowing ? 'text' : 'password'
           : type
         }
+        {...otherProps}
       />
 
       {type === 'password' && (

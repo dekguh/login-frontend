@@ -5,7 +5,8 @@ const Button : React.FC<IButton> = ({
     variant = 'primary',
     onClick,
     classes,
-    text
+    text,
+    type = 'button'
 }) => {
   return (
     <button
@@ -16,6 +17,7 @@ const Button : React.FC<IButton> = ({
             ${classes}
         `}
         onClick={onClick}
+        type={type}
     >
         {text}
     </button>
